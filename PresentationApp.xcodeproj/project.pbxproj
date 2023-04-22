@@ -16,6 +16,9 @@
 		8426972729E23FBA007F7CF5 /* PresentationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426972629E23FBA007F7CF5 /* PresentationAppTests.swift */; };
 		8426973129E23FBA007F7CF5 /* PresentationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426973029E23FBA007F7CF5 /* PresentationAppUITests.swift */; };
 		8426973329E23FBA007F7CF5 /* PresentationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426973229E23FBA007F7CF5 /* PresentationAppUITestsLaunchTests.swift */; };
+		844FB16329E3A33000BD2961 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844FB16229E3A33000BD2961 /* LoginViewControllerTests.swift */; };
+		84B9285D29EEA495004B08A7 /* LoginScreenSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9285C29EEA495004B08A7 /* LoginScreenSwiftUI.swift */; };
+		84DFB75B29E46CB100F017DF /* SwiftUISample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFB75A29E46CB100F017DF /* SwiftUISample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		8426972C29E23FBA007F7CF5 /* PresentationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8426973029E23FBA007F7CF5 /* PresentationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAppUITests.swift; sourceTree = "<group>"; };
 		8426973229E23FBA007F7CF5 /* PresentationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		844FB16229E3A33000BD2961 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		84B9285C29EEA495004B08A7 /* LoginScreenSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenSwiftUI.swift; sourceTree = "<group>"; };
+		84DFB75A29E46CB100F017DF /* SwiftUISample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUISample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,8 @@
 				8426971829E23FBA007F7CF5 /* Assets.xcassets */,
 				8426971A29E23FBA007F7CF5 /* LaunchScreen.storyboard */,
 				8426971D29E23FBA007F7CF5 /* Info.plist */,
+				84DFB75A29E46CB100F017DF /* SwiftUISample.swift */,
+				84B9285C29EEA495004B08A7 /* LoginScreenSwiftUI.swift */,
 			);
 			path = PresentationApp;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				8426972629E23FBA007F7CF5 /* PresentationAppTests.swift */,
+				844FB16229E3A33000BD2961 /* LoginViewControllerTests.swift */,
 			);
 			path = PresentationAppTests;
 			sourceTree = "<group>";
@@ -259,8 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8426971429E23FB8007F7CF5 /* ViewController.swift in Sources */,
+				84B9285D29EEA495004B08A7 /* LoginScreenSwiftUI.swift in Sources */,
 				8426971029E23FB8007F7CF5 /* AppDelegate.swift in Sources */,
 				8426971229E23FB8007F7CF5 /* SceneDelegate.swift in Sources */,
+				84DFB75B29E46CB100F017DF /* SwiftUISample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844FB16329E3A33000BD2961 /* LoginViewControllerTests.swift in Sources */,
 				8426972729E23FBA007F7CF5 /* PresentationAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,8 +454,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,9 +463,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.app.PresentationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -469,8 +484,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,9 +493,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.app.PresentationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
