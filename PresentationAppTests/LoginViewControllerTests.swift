@@ -29,6 +29,12 @@ class ViewControllerControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         
         XCTAssertNotNil(sut.logoImageView)
+    
+        let widthConstraint = sut.logoImageView.widthAnchor.constraint(equalToConstant: 200)
+        let heightConstraint = sut.logoImageView.heightAnchor.constraint(equalToConstant: 200)
+
+        XCTAssertEqual(widthConstraint.constant, 200)
+        XCTAssertEqual(heightConstraint.constant, 200)
     }
     
     func testUsernameTextFieldExists() {
